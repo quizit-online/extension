@@ -1,7 +1,8 @@
 <template>
   <div class="py-3 h-full box-border">
     <Return />
-    <div class="mt-24" v-if="tokens.length == 0">
+    <div class="mt-20" v-if="tokens.length == 0">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-wide text-center mb-2">Edpuzzle</h2>
       <p class="text-base max-w-full font-normal text-gray-600 leading-relaxed mb-5 2xl:px-80 text-center">
         Click button to get edpuzzle tokens
       </p>
