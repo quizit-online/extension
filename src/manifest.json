@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "version": "0.1.0",
+  "name": "Quizit.online",
+  "homepage_url": "https://quizit.online",
+  "description": "Quizit official browser extension",
+  "default_locale": "en",
+  "permissions": ["webRequest", "tabs", "cookies", "scripting"],
+  "host_permissions": ["https://*.quizizz.com/*", "https://*.edpuzzle.com/*", "https://*.testportal.pl/*"],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.brainly.com/*",
+        "https://*.brainly.pl/*",
+        "https://*.brainly.in/*",
+        "https://*.brainly.com.br/*",
+        "https://*.brainly.ph/*",
+        "https://*.brainly.lat/*"
+      ],
+      "js": ["content-scripts/brainly.js"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Popup",
+    "default_icon": {
+      "16": "icons/16.png",
+      "128": "icons/128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content-scripts/quizizz.js"],
+      "matches": ["https://*.quizizz.com/*"]
+    }
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; style-src 'self' 'unsafe-inline'"
+  }
+}
