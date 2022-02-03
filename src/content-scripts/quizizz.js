@@ -1,22 +1,15 @@
-(() => {
-  const { userProfile } = JSON.parse(localStorage.getItem("previousContext"));
+if (document.querySelector(".root-component")) {
+  const { game, user } = document.querySelector(".root-component").__vue__.$store.state;
+  const { player, data } = game;
 
-  fetch("https://quizizz.com/_api/main/v4/students/running")
-    .then((res) => res.json())
-    .then(({ data }) =>
-      chrome.runtime.sendMessage({
-        type: "quizizz",
-        dataString: btoa(
-          unescape(
-            encodeURIComponent(
-              JSON.stringify({
-                roomHash: data.items[0]._id,
-                playerId: data.items[0].attempts[0].playerId,
-                mongoId: userProfile.mongoId,
-              })
-            )
-          )
-        ),
-      })
+  if (player.hasJoinedTheGame) {
+    const dataString = window.btoa(
+      unescape(
+        encodeURIComponent(
+          JSON.stringify({ playerId: player.playerId, mongoId: user.profile.mongoId, roomHash: data.roomHash })
+        )
+      )
     );
-})();
+    window.open("https://quizit.online/services/quizizz/answers?data=" + dataString);
+  }
+}

@@ -3,7 +3,7 @@
     <Return />
     <h2 class="text-3xl md:text-4xl font-bold tracking-wide mt-28 text-center mb-2">Brainly</h2>
     <p class="text-base max-w-full font-normal text-gray-600 leading-relaxed 2xl:px-80 text-center">
-      Unlimited acess to all solutions on brainly.com with no limits and no ads
+      Unlimited access to all solutions on brainly.com with no limits and no ads
     </p>
   </div>
 </template>

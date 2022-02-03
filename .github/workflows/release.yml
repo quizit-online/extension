@@ -17,11 +17,11 @@ jobs:
             -   name: Install Node.js
                 uses: actions/setup-node@v1
                 with:
-                    node-version: 12.x
+                    node-version: 16.x
 
-            -   run: yarn install --frozen-lockfile
+            -   run: npm install
 
-            -   run: yarn build
+            -   run: npm run build
 
             -   name: Create Release
                 id: create_release

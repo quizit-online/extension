@@ -3,7 +3,7 @@
     <Return />
     <h2 class="text-3xl md:text-4xl font-bold tracking-wide mt-28 text-center mb-2">Testportal</h2>
     <p class="text-base max-w-full font-normal text-gray-600 leading-relaxed 2xl:px-80 text-center">
-      Allows you to change tabs without being detected
+      Allows you to switch tabs without being detected. It is activated automatically
     </p>
   </div>
 </template>

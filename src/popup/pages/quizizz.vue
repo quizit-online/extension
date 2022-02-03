@@ -22,12 +22,15 @@ export default {
   methods: {
     executeScript() {
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.scripting.executeScript({
-          target: {
-            tabId: tabs[0].id,
-          },
-          files: ["content-scripts/quizizz.js"],
-        });
+        if (/\/\/quizizz.com\//.test(tabs[0].url)) {
+          chrome.scripting.executeScript({
+            target: {
+              tabId: tabs[0].id,
+            },
+            world: "MAIN",
+            files: ["content-scripts/quizizz.js"],
+          });
+        }
       });
     },
   },
