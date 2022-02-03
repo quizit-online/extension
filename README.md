@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/github/forks/quizit-online/extension?style=social">
   <img src="https://img.shields.io/github/stars/quizit-online/extension?style=social">
   <img src="https://img.shields.io/github/issues/quizit-online/extension">
-<a href="https://quizit.online/discord" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+  <a href="https://quizit.online/discord" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
 </p>
 
 

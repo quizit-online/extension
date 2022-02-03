@@ -4,8 +4,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ZipPlugin = require("zip-webpack-plugin");
+const { nanoid } = require("nanoid");
 
 module.exports = {
+  mode: "production",
   entry: {
     popup: "./src/popup/main.js",
     background: "./src/background.js",
@@ -47,6 +50,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new ZipPlugin({
+      path: path.join(__dirname, "artifacts"),
+      filename: `quizit-${nanoid()}-.zip`,
+    }),
     new webpack.ProvidePlugin({
       process: "process/browser",
     }),

@@ -1,7 +1,8 @@
 const injectTestportalScript = () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const [currTab] = tabs;
-    if (currTab.url.startsWith("https://www.testportal")) {
+
+    if (currTab && currTab.url.startsWith("https://www.testportal")) {
       chrome.scripting.executeScript({
         target: {
           tabId: currTab.id,
@@ -41,12 +42,6 @@ chrome.webRequest.onSendHeaders.addListener(
 );
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.type === "quizizz") {
-    chrome.tabs.create({
-      url: `https://quizit.online/services/quizizz/answers?data=${request.dataString}`,
-    });
-  }
-
   if (request.type === "token") {
     chrome.cookies.getAll(
       {
