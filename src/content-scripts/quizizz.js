@@ -6,7 +6,7 @@ if (document.querySelector(".root-component")) {
     const dataString = window.btoa(
       unescape(
         encodeURIComponent(
-          JSON.stringify({ playerId: player.playerId, mongoId: user.profile.mongoId, roomHash: data.roomHash })
+          JSON.stringify({ playerId: player.playerId, mongoId: user.profile.mongoId || null, roomHash: data.roomHash })
         )
       )
     );
