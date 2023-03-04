@@ -1,30 +1,30 @@
 <script lang="ts" setup>
-import quizizz from "../assets/quizizz.png";
-import edpuzzle from "../assets/edpuzzle.png";
-import brainly from "../assets/brainly.png";
-import testportal from "../assets/testportal.png";
-import Card from "../components/Card.vue";
+import quizizz from '../assets/quizizz.png'
+import edpuzzle from '../assets/edpuzzle.png'
+import brainly from '../assets/brainly.png'
+import testportal from '../assets/testportal.png'
+import Card from '../components/Card.vue'
 
 const services = [
   {
-    name: "Quizizz",
+    name: 'Quizizz',
     icon: quizizz,
   },
   {
-    name: "Edpuzzle",
+    name: 'Edpuzzle',
     icon: edpuzzle,
   },
   {
-    name: "Brainly",
+    name: 'Brainly',
     icon: brainly,
   },
   {
-    name: "Testportal",
+    name: 'Testportal',
     icon: testportal,
   },
-];
+]
 
-const version = chrome.runtime.getManifest().version;
+const version = chrome.runtime.getManifest().version
 </script>
 
 <template>
@@ -39,7 +39,11 @@ const version = chrome.runtime.getManifest().version;
       <p class="text-lg font-medium text-slate-700">v.{{ version }}</p>
     </div>
 
-    <Card v-for="service in services" :key="service.name" @click="$router.push({ name: service.name })">
+    <Card
+      v-for="service in services"
+      :key="service.name"
+      @click="$router.push({ name: service.name })"
+    >
       <div class="flex items-center gap-x-3">
         <img :src="service.icon" class="h-8 rounded" />
         <p class="text-lg font-medium text-slate-700">{{ service.name }}</p>
