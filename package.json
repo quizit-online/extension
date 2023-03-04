@@ -1,12 +1,12 @@
 {
   "name": "extension",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "description": "",
   "scripts": {
     "test": "vite",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --fix"
+    "lint": "prettier -w . && eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +22,7 @@
     "eslint-config-standard-with-typescript": "^34.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier-vue": "^4.2.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.9.0",
     "postcss": "^8.4.21",

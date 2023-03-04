@@ -24,7 +24,6 @@ function getCurrentData() {
     return
   }
 
-  // @ts-ignore
   const { user, game } = root.__vue_app__.config.globalProperties.$store.state
 
   return {

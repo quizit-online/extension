@@ -1,9 +1,9 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import { crx } from "@crxjs/vite-plugin";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import { crx } from '@crxjs/vite-plugin'
 // @ts-ignore
-import manifest from "./manifest.json" assert { type: "json" };
-import { viteStaticCopy } from "vite-plugin-static-copy";
+import manifest from './manifest.json' assert { type: 'json' }
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,10 +13,10 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: "./src/_locales",
-          dest: "",
+          src: './src/_locales',
+          dest: '',
         },
       ],
     }),
   ],
-});
+})
