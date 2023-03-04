@@ -24,7 +24,7 @@ const executeScript = async () => {
 
     errorMessage.value = ''
   } else {
-    errorMessage.value = 'You need to have quizizz tab open'
+    errorMessage.value = 'You need to open Quizizz first'
   }
 }
 </script>
@@ -38,9 +38,12 @@ const executeScript = async () => {
     <p
       class="text-base max-w-full font-normal text-gray-600 mb-3 mt-1 text-center"
     >
-      Join a quiz and click the button below. More detailed instructions can be
-      found in
+      Join a quiz and click the button below to get your answers. More detailed
+      instructions can be found in our
+      <a class="text-blue" target="_blank" href="https://quizit.online/docs/"
+        >docs</a
+      >.
     </p>
-    <Button class="mx-auto" @click="executeScript">Get answers</Button>
+    <Button class="mx-auto" @click="executeScript">Get Answers</Button>
   </div>
 </template>

@@ -15,14 +15,15 @@ chrome.storage.local.get('solutionsUnlocked', ({ solutionsUnlocked }) => {
     <p
       class="text-base max-w-full font-normal text-gray-600 mb-3 mt-1 text-center"
     >
-      Unlimited access to all solutions on brainly.com with no limits and no ads
+      Unlimited access to all solutions on brainly.com with no limits and no
+      ads.
     </p>
 
     <div
       class="text-base text-gray-600 flex flex-col justify-center text-center"
     >
       <p class="font-bold text-xl text-black">{{ solutions }}</p>
-      solutions unlocked thanks to us
+      Solutions unlocked thanks to us.
     </div>
   </div>
 </template>

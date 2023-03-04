@@ -44,13 +44,14 @@ const getTokens = async () => {
       <p
         class="text-base max-w-full font-normal text-gray-600 mb-3 mt-1 text-center"
       >
-        Allows you to gather tokens that you can use later to log in on our
+        Allows you to easily get your account's tokens that you can later use in
+        our
         <Link to="https://quizit.online/services/edpuzzle">
-          edpuzzle cheat
-        </Link>
+          Edpuzzle cheat </Link
+        >.
       </p>
 
-      <Button class="mx-auto" @click="getTokens">Get tokens</Button>
+      <Button class="mx-auto" @click="getTokens">Get Tokens</Button>
     </div>
     <div v-else>
       <Card

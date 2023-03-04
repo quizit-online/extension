@@ -34,7 +34,7 @@ const getEdpuzzleToken = async (
   if (tokens.length === 0) {
     response({
       success: false,
-      message: 'No tokens found. Try to log in on your edpuzzle account.',
+      message: 'No tokens found. Are you sure you are logged in?',
     })
     return
   }

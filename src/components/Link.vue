@@ -6,6 +6,6 @@ defineProps<{
 
 <template>
   <a :href="to" target="_blank" class="text-blue-600 font-medium">
-    <slot></slot>
+    <slot />
   </a>
 </template>
